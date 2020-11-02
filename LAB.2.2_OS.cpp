@@ -10,8 +10,8 @@ void ReadFRFile(const char* path)
 	{
 		if (LPVOID p = MapViewOfFile(hFileMapping, FILE_MAP_ALL_ACCESS, 0, 0, 4096))
 		{
-			LPSTR msg = static_cast<LPSTR>(p);
-			std::cout << " Содержимое из спроецированного файла: " << msg << std::endl;
+			LPSTR dat = static_cast<LPSTR>(p);
+			std::cout << " Содержимое из спроецированного файла: " << dat << std::endl;
 			UnmapViewOfFile(p);
 		}
 		else
