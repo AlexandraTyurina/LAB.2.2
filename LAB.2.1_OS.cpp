@@ -21,7 +21,7 @@ void WriteINFile(const char* path)
 		CopyMemory((PVOID)p, str.c_str(), str.length() * sizeof(char));
 		system("pause");
 		//Функция UnmapViewOfFile отменяет отображение  представления файла из адресного пространства вызывающего процесса.
-		UnmapViewOfFile(p); // узнать что за функция
+		UnmapViewOfFile(p);
 		}
 		else
 			std::cout << " Ошибка: " << GetLastError() << std::endl; 
